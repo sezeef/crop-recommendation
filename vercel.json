@@ -4,7 +4,6 @@
     {
       "src": "backend/app.py",
       "use": "@vercel/python",
-      "config": { "buildCommand": "sh ./build.sh" }
     }
   ],
   "routes": [
