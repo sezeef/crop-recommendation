@@ -5,7 +5,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import numpy as np
 import pickle as pkl
-from werkzeug.middleware.dispatcher import DispatcherMiddleware
+# from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from vercel_wsgi import make_app
 
 # Load the model
@@ -58,11 +58,11 @@ def recommend_api():
         return jsonify({"error": str(e)}), 500
 
 # For Vercel: wrap the app with Vercel WSGI middleware
-if os.getenv("VERCEL_ENV") == "production":
-    app = DispatcherMiddleware(app, {
-        '/api': app
-    })
-    app = make_app(app)
+# if os.getenv("VERCEL_ENV") == "production":
+    # app = DispatcherMiddleware(app, {
+    #     '/api': app
+    # })
+app = make_app(app)
 
 # Run the app locally
 # if __name__ == '__main__':
