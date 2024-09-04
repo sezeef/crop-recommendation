@@ -65,5 +65,5 @@ if os.getenv("VERCEL_ENV") == "production":
     app = make_app(app)
 
 # Run the app locally
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=5000)
