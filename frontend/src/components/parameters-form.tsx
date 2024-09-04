@@ -21,11 +21,7 @@ const formSchema = z.object(
   Object.fromEntries(
     parameters.labels.map((label, index) => [
       label,
-      z
-        .number()
-        .min(0)
-        .max(parameters.max[index])
-        .step(0.01),
+      z.number().min(0).max(parameters.max[index]).step(0.01),
     ]),
   ),
 );
@@ -54,7 +50,12 @@ export function ParametersForm() {
       ],
     });
 
-    const res = await fetch("http://localhost:5000/api/recommend", {
+    const app_url =
+      process.env.NODE_ENV === "production"
+        ? process.env.APP_URL
+        : "http://localhost:5000";
+
+    const res = await fetch(app_url + "/api/recommend", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,8 +85,8 @@ export function ParametersForm() {
         >
           <h2 className="text-2xl">Get Your Customized Crop Recommendations</h2>
           <h3 className="text-lg text-muted-foreground">
-            Fill out the form with your soil&apos;s properties, and we&apos;ll analyze the
-            data to recommend the best crops for your land.
+            Fill out the form with your soil&apos;s properties, and we&apos;ll
+            analyze the data to recommend the best crops for your land.
           </h3>
           <div className="grid grid-cols-2 gap-4">
             {parameters.labels.map((_, i) => (
