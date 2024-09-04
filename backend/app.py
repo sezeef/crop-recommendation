@@ -7,6 +7,8 @@ import numpy as np
 import pickle as pkl
 # from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from vercel_wsgi import make_app
+import sys
+sys.path.append('/vercel/path0')
 
 # Load the model
 model_path = os.path.join(os.path.dirname(__file__), "model.pkl")
