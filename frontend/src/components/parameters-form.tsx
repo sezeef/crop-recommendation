@@ -52,7 +52,7 @@ export function ParametersForm() {
 
     const app_url =
       process.env.NODE_ENV === "production"
-        ? process.env.APP_URL
+        ? process.env.NEXT_PUBLIC_APP_URL
         : "http://localhost:5000";
 
     const res = await fetch(app_url + "/api/recommend", {

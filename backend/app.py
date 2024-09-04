@@ -14,7 +14,7 @@ with open(model_path, "rb") as file:
     model = pkl.load(file)
 
 # Get the app URL from environment variables, with a default for development
-app_url = os.getenv("APP_URL", "http://localhost:3000")  # Localhost for local dev
+app_url = os.getenv("NEXT_PUBLIC_APP_URL", "*")  # Localhost for local dev
 
 # Initialize Flask app
 app = Flask(__name__)
