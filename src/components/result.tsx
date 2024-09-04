@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { targets } from "@/lib/data";
 import { useResult } from "@/components/result-context";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -14,7 +15,7 @@ export function Result() {
   if (isLoading) {
     return (
       <section id="result" className="bg-[#0d1601] text-white py-8">
-        <div className="flex flex-col md:flex-row w-full max-w-5xl mx-auto">
+        <div className="flex flex-col items-center md:flex-row w-full max-w-5xl mx-auto">
           <Skeleton className="w-[600px] h-[400px] rounded-l-lg md:w-1/2" />
           <div className="p-6 space-y-4 md:w-1/2">
             <div className="bg-primary text-primary-foreground px-4 py-2 rounded-lg inline-block">
@@ -33,8 +34,8 @@ export function Result() {
 
   return (
     <section id="result" className="bg-[#0d1601] text-white py-8">
-      <div className="flex flex-col md:flex-row w-full max-w-5xl mx-auto">
-        <img
+      <div className="flex flex-col items-center md:flex-row w-full max-w-5xl mx-auto">
+        <Image
           src={`/image/target/crop-${result.recommendation}.jpg`}
           alt="Result Image"
           width="600"
