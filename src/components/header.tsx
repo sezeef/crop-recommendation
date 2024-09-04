@@ -26,7 +26,7 @@ export function Header() {
           </h1>
           <p className="mx-auto max-w-[700px] text-green-50 md:text-xl">
             Empower your farming with precise, data-driven insights. Our AI
-            analyzes your soil's unique characteristics to recommend the best
+            analyzes your soil&apos;s unique characteristics to recommend the best
             crops for optimal growth, sustainability, and yield.
           </p>
           <Link href="#app">

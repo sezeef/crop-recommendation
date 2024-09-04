@@ -53,7 +53,6 @@ export function ParametersForm() {
         input["Rainfall"],
       ],
     });
-    // console.log(reqBody);
 
     const res = await fetch("http://localhost:5000/api/recommend", {
       method: "POST",
@@ -85,7 +84,7 @@ export function ParametersForm() {
         >
           <h2 className="text-2xl">Get Your Customized Crop Recommendations</h2>
           <h3 className="text-lg text-muted-foreground">
-            Fill out the form with your soil's properties, and we'll analyze the
+            Fill out the form with your soil&apos;s properties, and we&apos;ll analyze the
             data to recommend the best crops for your land.
           </h3>
           <div className="grid grid-cols-2 gap-4">
