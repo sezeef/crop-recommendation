@@ -21,7 +21,7 @@ export function Result() {
               <h3 className="text-2xl font-bold">Top Result</h3>
             </div>
             <h2 className="text-2xl">
-              Based on your soil parameters, the recommended crop is:{" "}
+              Based on your soil parameters, the recommended crop is:
             </h2>
             <Skeleton className="w-30 h-10" />
             <Skeleton className="w-30 h-10" />
@@ -52,61 +52,11 @@ export function Result() {
           <h2 className="text-2xl font-bold capitalize">
             {targets[result.recommendation].label}
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-green-50">
             {targets[result.recommendation].description}
-          Crop description</p>
-          {/* <div className="grid grid-cols-2 gap-4"> */}
-          {/*   <div className="bg-muted rounded-lg p-4 space-y-2"> */}
-          {/*     <h4 className="text-lg font-medium">Duration</h4> */}
-          {/*     <p>10 days</p> */}
-          {/*   </div> */}
-          {/*   <div className="bg-muted rounded-lg p-4 space-y-2"> */}
-          {/*     <h4 className="text-lg font-medium">Difficulty</h4> */}
-          {/*     <p>Moderate</p> */}
-          {/*   </div> */}
-          {/*   <div className="bg-muted rounded-lg p-4 space-y-2"> */}
-          {/*     <h4 className="text-lg font-medium">Highlights</h4> */}
-          {/*     <ul className="space-y-1 text-muted-foreground"> */}
-          {/*       <li> */}
-          {/*         <CheckIcon className="w-4 h-4 mr-2 inline-block" /> */}
-          {/*         Visit the Great Pyramids of Giza */}
-          {/*       </li> */}
-          {/*       <li> */}
-          {/*         <CheckIcon className="w-4 h-4 mr-2 inline-block" /> */}
-          {/*         Cruise along the Nile River */}
-          {/*       </li> */}
-          {/*       <li> */}
-          {/*         <CheckIcon className="w-4 h-4 mr-2 inline-block" /> */}
-          {/*         Explore the Valley of the Kings */}
-          {/*       </li> */}
-          {/*     </ul> */}
-          {/*   </div> */}
-          {/*   <div className="bg-muted rounded-lg p-4 space-y-2"> */}
-          {/*     <h4 className="text-lg font-medium">Price</h4> */}
-          {/*     <p>$2,499 per person</p> */}
-          {/*   </div> */}
-          {/* </div> */}
+          </p>
         </div>
       </div>
     </section>
   );
 }
-
-// function CheckIcon(props: any) {
-//   return (
-//     <svg
-//       {...props}
-//       xmlns="http://www.w3.org/2000/svg"
-//       width="24"
-//       height="24"
-//       viewBox="0 0 24 24"
-//       fill="none"
-//       stroke="currentColor"
-//       strokeWidth="2"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//     >
-//       <path d="M20 6 9 17l-5-5" />
-//     </svg>
-//   );
-// }
